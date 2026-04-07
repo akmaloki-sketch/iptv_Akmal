@@ -1,0 +1,117 @@
+name: Update IPTV Playlist
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Download and process playlists
+      run: |
+        python3 << 'EOF'
+        import urllib.request
+        import ssl
+        from datetime import datetime
+        
+        ssl._create_default_https_context = ssl._create_unverified_context
+        
+        PLAYLISTS = {
+            "Русские": "https://iptv-org.github.io/iptv/languages/rus.m3u",
+            "Узбекские": "https://iptv-org.github.io/iptv/languages/uzb.m3u",
+            "Турецкие": "https://iptv-org.github.io/iptv/languages/tur.m3u",
+            "Спортивные": {
+                "Россия": "https://iptv-org.github.io/iptv/countries/ru.m3u",
+                "Узбекистан": "https://iptv-org.github.io/iptv/countries/uz.m3u",
+                "Азербайджан": "https://iptv-org.github.io/iptv/countries/az.m3u",
+                "Украина": "https://iptv-org.github.io/iptv/countries/ua.m3u",
+                "Англия": "https://iptv-org.github.io/iptv/countries/gb.m3u",
+                "Германия": "https://iptv-org.github.io/iptv/countries/de.m3u",
+                "Испания": "https://iptv-org.github.io/iptv/countries/es.m3u",
+            }
+        }
+        
+        SPORTS_KEYWORDS = ["матч", "спорт", "sport", "футбол", "nfl", "nba", "premier", "la liga", "bundesliga", "laliga", "champions", "лига", "кубок"]
+        
+        def download_playlist(url):
+            try:
+                with urllib.request.urlopen(url, timeout=30) as response:
+                    return response.read().decode('utf-8', errors='ignore')
+            except Exception as e:
+                print(f"Error: {e}")
+                return None
+        
+        def parse_channels(content, group_name=""):
+            lines = content.split('\n')
+            channels = []
+            i = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                if line.startswith('#EXTINF'):
+                    channel_name = line.split(',')[-1] if ',' in line else "Unknown"
+                    if i + 1 < len(lines):
+                        url = lines[i + 1].strip()
+                        if url and not url.startswith('#'):
+                            channels.append({
+                                'name': channel_name,
+                                'url': url,
+                                'info': line,
+                                'group': group_name
+                            })
+                i += 1
+            return channels
+        
+        def is_sports_channel(name):
+            return any(kw in name.lower() for kw in SPORTS_KEYWORDS)
+        
+        all_channels = {}
+        for group_name, playlist_data in PLAYLISTS.items():
+            all_channels[group_name] = []
+            if isinstance(playlist_data, dict):
+                for country, url in playlist_data.items():
+                    content = download_playlist(url)
+                    if content:
+                        channels = parse_channels(content, country)
+                        sports = [ch for ch in channels if is_sports_channel(ch['name'])]
+                        all_channels[group_name].extend(sports)
+            else:
+                content = download_playlist(playlist_data)
+                if content:
+                    all_channels[group_name] = parse_channels(content, group_name)
+        
+        content = "#EXTM3U\n"
+        for group_name, channels in all_channels.items():
+            if channels:
+                for channel in channels:
+                    info_line = channel['info']
+                    if 'group-title=' not in info_line:
+                        info_line = info_line.replace('#EXTINF:-1', f'#EXTINF:-1 group-title="{group_name}"')
+                    content += f"{info_line}\n"
+                    content += f"{channel['url']}\n"
+        
+        with open('all_channels.m3u', 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        total = sum(len(ch) for ch in all_channels.values())
+        print(f"✅ Updated: {datetime.now().strftime('%d.%m.%Y %H:%M:%S')}")
+        print(f"📺 Channels: {total}")
+        EOF
+    
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add all_channels.m3u
+        git commit -m "Auto-update: $(date '+%d.%m.%Y %H:%M:%S')" || exit 0
+        git push
