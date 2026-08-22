@@ -313,6 +313,8 @@ https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex
 https://web.sats.gstv.tech/cpl11/da8df281-1165-440a-8c86-959f71b695b6/N4web.m3u8
 #EXTINF:-1 tvg-id="Nano.ru@SD" tvg-logo="https://i.imgur.com/dYj3XDa.png" group-title="Documentary",Nano (576p)
 http://stream.mcquack.net/419/index.m3u8
+#EXTINF:-1 tvg-id="Nano.ru@HD" tvg-logo="https://i.imgur.com/dYj3XDa.png" group-title="Documentary",Nano HD (1080p)
+http://185.23.80.23:8080/NANO_HD/index.m3u8
 #EXTINF:-1 tvg-id="NashKinomir.de@SD" tvg-logo="https://i.imgur.com/7M1J42A.png" group-title="Movies",Nash Kinomir (576p)
 http://hls127.freeott.top:8080/Nash_kinomir/video.m3u8
 #EXTINF:-1 tvg-id="Nashe.ru@HD" tvg-logo="https://i.imgur.com/KO8dhi9.png" group-title="Movies;Series",Nashe HD (576p)
@@ -616,7 +618,7 @@ http://stream.mcquack.net/152/index.m3u8
 #EXTINF:-1 tvg-id="TV1000RussianKinoGlobal.ru@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png/1280px-TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png" group-title="Movies",TV1000 Russian Kino Global
 http://213.91.179.28:8000/play/a0bx
 #EXTINF:-1 tvg-id="TVBRICSRussian.ru@SD" tvg-logo="https://i.imgur.com/vLpm8tN.png" group-title="General",TV BRICS Russian (1080p)
-https://rusbrics.mediacdn.ru/cdn/brics/russian/playlist.m3u8
+http://185.23.80.23:8080/TVBRICS/index.m3u8
 #EXTINF:-1 tvg-id="TVCentr.ru@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/ru/7/72/TV_Tsentr_2013_Logo.svg" group-title="Undefined",TV Centr (576p)
 http://hls127.freeott.top:8080/Tv_Center/video.m3u8
 #EXTINF:-1 tvg-id="TVManaRusskiy.pt@SD" tvg-logo="https://i.imgur.com/fACHqmY.png" group-title="Religious",TV Maná Russkiy (1080p)
@@ -633,6 +635,8 @@ http://5.188.159.128:8070/udar/index.m3u8
 https://ulytau.tv/hls/master.m3u8
 #EXTINF:-1 tvg-id="UniverTV.ru@SD" tvg-logo="https://i.imgur.com/r3u0mxr.png" group-title="Undefined",Univer TV (1080p)
 https://cdn.universmotri.ru/live/smil:univer.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="UnknownRussia.ru@HD" tvg-logo="https://i.imgur.com/W7ste2f.png" group-title="Undefined",Unknown Russia HD (1080p)
+http://185.23.80.23:8080/NeizvestnayaRossia/index.m3u8
 #EXTINF:-1 tvg-id="Usadba.ru@SD" tvg-logo="https://i.imgur.com/mf13haG.png" group-title="Undefined",Usadba (576p)
 http://stream.mcquack.net/211/index.m3u8
 #EXTINF:-1 tvg-id="UzReportTV.uz@SD" tvg-logo="https://i.imgur.com/Bch2RHc.jpg" group-title="News",UzReport TV (1080p)
@@ -843,8 +847,6 @@ http://31.148.48.15/Multilandiya/index.m3u8
 https://sirius.greenhosting.ru/MultimaniaRu/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="HopeChannelRussia.ru@SD" tvg-logo="https://i.imgur.com/ah6VnFJ.png" group-title="Religious",Надежда (720p)
 https://live-tvhope.cdnvideo.ru/tvhope-pull/tvhope_1/playlist.m3u8
-#EXTINF:-1 tvg-id="Nano.ru@HD" tvg-logo="https://i.imgur.com/dYj3XDa.png" group-title="Documentary",Нано ТВ HD (576p)
-http://s1.tv-nano.com/Nano_rec/index.m3u8
 #EXTINF:-1 tvg-id="CurrentTimeTV.cz@SD" tvg-logo="https://i.imgur.com/hKo8ApU.png" group-title="News",Настоящее Время (1080p)
 https://rfe-ingest.akamaized.net/hls/live/2033043/tvmc05/master.m3u8
 #EXTINF:-1 tvg-id="Nauka.ru@SD" tvg-logo="https://i.imgur.com/ZZxzueO.png" group-title="Documentary",НАУКА (1080p)
@@ -1152,7 +1154,7 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-id="ATVAlanya.tr@SD" tvg-logo="https://i.imgur.com/bUwarR0.png" group-title="General",ATV Alanya (1080p)
 https://cdn-alanyatv.yayin.com.tr/alanyatv/alanyatv/playlist.m3u8
 #EXTINF:-1 tvg-id="ATVAvrupa.tr@SD" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png" group-title="Undefined",ATV Avrupa (576p)
-https://flaskapihls-atv-avrupa-trkvzlive.onrender.com/hls_stream/master.m3u8
+https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
 #EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/21/Urmia_TV.svg/960px-Urmia_TV.svg.png" group-title="General",Azerbaijan Gharbi
 https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8
 #EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="Kids",BabyFirst (720p)
@@ -1367,6 +1369,8 @@ https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d91
 https://canli.sercemtv.com.tr/hls/0/stream.m3u8
 #EXTINF:-1 tvg-id="ShowTurk.tr@SD" tvg-logo="https://i.imgur.com/fdZpGDj.png" group-title="Undefined",Show Turk (1080p)
 https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8
+#EXTINF:-1 tvg-id="SozcuTV.tr@SD" tvg-logo="https://i.imgur.com/BxpdvsG.png" group-title="General",Sozcu TV (1080p)
+http://5.178.103.239:55/yt1/szctv.m3u8
 #EXTINF:-1 tvg-id="StarTV.tr@SD" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Undefined",Star TV (720p)
 https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
 #EXTINF:-1 tvg-id="StingrayNaturescape.ca@SD" tvg-logo="https://i.imgur.com/882kd90.png" group-title="Music",Stingray Naturescape (1080p)
