@@ -91,8 +91,8 @@ https://fs.uplink.kz/atameken/mono.m3u8?token=onlinetv
 http://stream.mcquack.net/244/index.m3u8
 #EXTINF:-1 tvg-id="AutoPlus.ru@SD" tvg-logo="https://i.imgur.com/sVc8cFt.png" group-title="Auto",Auto Plus (576p)
 http://str2.iptvhd.ru:8080/Avto_Plyus/index.m3u8
-#EXTINF:-1 tvg-id="Avto24.ru@SD" tvg-logo="https://i.imgur.com/GXSXmN2.png" group-title="Auto",Avto24 (576p)
-http://stream.mcquack.net/78/index.m3u8
+#EXTINF:-1 tvg-id="Avto24.ru@SD" tvg-logo="https://i.imgur.com/GXSXmN2.png" group-title="Auto",Avto24 (1080i)
+http://str2.iptvhd.ru:8080/Avto_24/index.m3u8
 #EXTINF:-1 tvg-id="BabyTime.ru@SD" tvg-logo="https://i.imgur.com/lW3WIBD.png" group-title="Kids;Music",Baby Time (576p)
 http://178.134.1.158:8081/babytime/index.m3u8
 #EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="Kids",BabyFirst (720p)
@@ -697,7 +697,7 @@ http://stream.mcquack.net/491/index.m3u8
 http://stream.mcquack.net/493/index.m3u8
 #EXTINF:-1 tvg-id="OkkoSport.ru@SD" tvg-logo="https://i.imgur.com/SYOaOQc.png" group-title="Sports",Okko Sport (1080p)
 http://stream.mcquack.net/492/index.m3u8
-#EXTINF:-1 tvg-id="OplotTV.ru@SD" tvg-logo="https://i.imgur.com/RvUkId2.png" group-title="News",Oplot TV (1080p) [Geo-blocked]
+#EXTINF:-1 tvg-id="OplotTV.ru@SD" tvg-logo="https://i.imgur.com/RvUkId2.png" group-title="News",Oplot TV SD (1080p) [Geo-blocked]
 http://31.131.139.253:9002/oplot_hd/index.m3u8
 #EXTINF:-1 tvg-id="Oruzhie.ru@SD" tvg-logo="https://i.imgur.com/lfJQJqa.png" group-title="Entertainment",Oruzhie (576p)
 https://fs.uplink.kz/oruzhie/mono.m3u8?token=onlinetv
@@ -885,6 +885,8 @@ https://stream.smotrim.ru/hls2/ext_spbtv/playlist_5.m3u8
 http://77.232.131.211/Sapfir/manifest.m3u8
 #EXTINF:-1 tvg-id="Sarafan.ru@SD" tvg-logo="https://i.imgur.com/u4q1rMT.png" group-title="Undefined",Sarafan (576p)
 http://stream.mcquack.net/81/index.m3u8
+#EXTINF:-1 tvg-id="SetantaSports1.ru@HD" tvg-logo="https://i.imgur.com/8ANUZAu.png" group-title="Sports",Setanta Sports 1 HD
+https://fs.uplink.kz/setanta_sports_1_hd/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="Seven.ru@SD" tvg-logo="https://i.imgur.com/GpCwqUF.png" group-title="Undefined",Seven (576p)
 http://31.148.48.15/7TV/index.m3u8
 #EXTINF:-1 tvg-id="Sever.ru@SD" tvg-logo="https://i.imgur.com/sTOQLYl.png" group-title="Undefined",Sever
@@ -965,7 +967,7 @@ http://forever.megogo.xyz/iptv/QGB4M3H62GC7E3/2465/index.m3u8
 http://176.118.197.101/START_AIR/index.m3u8
 #EXTINF:-1 tvg-id="STARTAir.ru@HD" tvg-logo="https://images.iptv.rt.ru/images/d60qp8omife4gis72tk0.png" group-title="Movies",START Air HD (1080p)
 http://str2.iptvhd.ru:8080/START_Air_HD/index.m3u8
-#EXTINF:-1 tvg-id="StartTriumf.ru@SD" tvg-logo="https://i.imgur.com/L9jTieL.png" group-title="Sports",Start Triumf
+#EXTINF:-1 tvg-id="StartTriumf.ru@SD" tvg-logo="https://i.imgur.com/L9jTieL.png" group-title="Sports",Start Triumf (1080p)
 https://bl.webcaster.pro/media/playlist/free_fe8dc1b768a84b8b0333db826471f17e_hd/33_85479982/1080p/8666c3e935faf6ef47ffd601e8e48868/4821408969.m3u8
 #EXTINF:-1 tvg-id="STARTWorld.ru@SD" tvg-logo="https://images.iptv.rt.ru/images/d6iist8mifeailfopupg.png" group-title="Movies",START World (576p)
 https://fs.uplink.kz/start_world/mono.m3u8?token=onlinetv
@@ -1211,6 +1213,8 @@ http://stream.mcquack.net/76/index.m3u8
 https://vgtrkregion-reg.cdnvideo.ru/vgtrk/vladivostok/vostok24-hd/index.m3u8
 #EXTINF:-1 tvg-id="WeSportTV.md@SD" tvg-logo="https://i.imgur.com/vJZgpOb.png" group-title="Sports",We Sport TV
 http://forever.megogo.xyz/iptv/QGB4M3H62GC7E3/2471/index.m3u8
+#EXTINF:-1 tvg-id="YaltaTV.ru@SD" tvg-logo="https://img.cataloxy.ru/fl/97/e3/808131.gif" group-title="Undefined",Yalta TV (480p) [Geo-blocked]
+http://195.26.83.96:7029/play/a006
 #EXTINF:-1 tvg-id="YaPervyy.ru@HD" tvg-logo="https://yarreg.ru/gallery/news/2025/03/293241/3.jpeg" group-title="General",YaPervyy (1080p)
 https://yaroslavl.mediacdn.ru/cdn/pervyaroslavsk/playlist.m3u8
 #EXTINF:-1 tvg-id="Yuvelirochka.ru@SD" tvg-logo="https://i.imgur.com/IcWtXCZ.png" group-title="Shop",Yuvelirochka (576p)
@@ -1655,6 +1659,8 @@ http://str2.iptvhd.ru:8080/Extreme_Sports/index.m3u8
 http://stream.mcquack.net/493/index.m3u8
 #EXTINF:-1 tvg-id="OkkoSport.ru@SD" tvg-logo="https://i.imgur.com/SYOaOQc.png" group-title="Sports",Okko Sport (1080p)
 http://stream.mcquack.net/492/index.m3u8
+#EXTINF:-1 tvg-id="SetantaSports1.ru@HD" tvg-logo="https://i.imgur.com/8ANUZAu.png" group-title="Sports",Setanta Sports 1 HD
+https://fs.uplink.kz/setanta_sports_1_hd/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="Sportivnyy.ru@SD" tvg-logo="https://i.imgur.com/ujS6mMo.png" group-title="Sports",Sportivnyy (1080p)
 https://live-3.otcnet.ru/sportivny/index.m3u8
 #EXTINF:-1 tvg-id="TraceSportStars.fr@Russia" tvg-logo="https://i.imgur.com/FabFP5A.png" group-title="Sports",Trace Sport Stars Russia (720p)
